@@ -42,7 +42,7 @@ setup(
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',
     install_requires=read_file('requirements.txt').splitlines(),
-    python_requires='>=2.7',
+    python_requires='>=3.4',
     package_data={
         # '': ['package_data.dat'],
     },
