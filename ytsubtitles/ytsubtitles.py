@@ -70,7 +70,10 @@ def get_video_info(video_id):
 
 
 def get_sub_track_url(video_info, lang='it'):
-    v = json.loads(video_info['player_response'][0])
+    try:
+        v = json.loads(video_info['player_response'][0])
+    except KeyError:
+        raise Exception("Error retrieving metadata. The video may be non-existing.")
     tracks_l = v['captions']['playerCaptionsTracklistRenderer']['captionTracks']
     for t in tracks_l:
         if lang == t['languageCode']:
@@ -84,7 +87,7 @@ def get_subs_data(subs_url):
     return html.unescape(contents)
 
 
-def download_subs(video_identifier='rS2KlPC-E54', target_language='it'):
+def download_subs(video_identifier, target_language):
     info = get_video_info(video_identifier)
     track_url = get_sub_track_url(info, target_language)
     if track_url is None:
