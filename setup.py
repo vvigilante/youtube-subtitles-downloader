@@ -23,7 +23,7 @@ clean_dist()
 
 setup(
     name='ytsubtitles',
-    version="0.0.3",
+    version="0.0.4",
     author='Vincenzo Vigilante, Gioele Crispo',
     author_email='info@vvigilante.com',
     package_dir={'ytsubtitles': 'ytsubtitles'},
