@@ -99,9 +99,9 @@ def download_subs(video_identifier, target_language):
 
 def download_subs_arguments():
     parser = argparse.ArgumentParser(description='Download subtitles from youtube.')
-    parser.add_argument('--video', dest='video',
+    parser.add_argument('video',
                         help="Video id from youtube.")
-    parser.add_argument('--lang', dest='lang', default='en',
+    parser.add_argument('--lang', default='en',
                         help='The subs language')
     args = parser.parse_args()
     download_subs(args.video, args.lang)

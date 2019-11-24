@@ -5,7 +5,7 @@ python implementation
 
 ## Usage example
 ```bash
-ytsubtitles --video=ZXD4X6INh7w --lang=it > out.srt
+ytsubtitles ZXD4X6INh7w --lang=it > out.srt
 ```
 
 # Acknowledgements
