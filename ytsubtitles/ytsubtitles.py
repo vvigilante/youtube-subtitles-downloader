@@ -95,8 +95,7 @@ def download_subs(video_identifier='rS2KlPC-E54', target_language='it'):
 
 
 def download_subs_arguments():
-    parser = argparse.ArgumentParser(prog='dlsubs',
-                                     description='Download subs from youtube.')
+    parser = argparse.ArgumentParser(description='Download subtitles from youtube.')
     parser.add_argument('--video', dest='video',
                         help="Video id from youtube.")
     parser.add_argument('--lang', dest='lang', default='en',
@@ -106,10 +105,4 @@ def download_subs_arguments():
 
 
 if __name__ == '__main__':
-    video_id = 'ZXD4X6INh7w'
-    target_lang = 'it'
-    if len(sys.argv) > 1:
-        video_id = sys.argv[1]
-    if len(sys.argv) > 2:
-        target_lang = sys.argv[2]
-    download_subs(video_id, target_lang)
+    download_subs_arguments()

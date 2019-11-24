@@ -22,23 +22,23 @@ def upload_to_pypi():
 clean_dist()
 
 setup(
-    name='dlsubs',
-    version="0.0.1",
-    author='Vincenzo Vigilante',
+    name='ytsubtitles',
+    version="0.0.2",
+    author='Vincenzo Vigilante, Gioele Crispo',
     author_email='info@vvigilante.com',
-    package_dir={'dlsubs': 'dlsubs'},
+    package_dir={'ytsubtitles': 'ytsubtitles'},
     packages=find_packages('.'),
     entry_points={
         'console_scripts': [
-            'dlsubs = dlsubs.dlsubs:download_subs_arguments'
+            'ytsubtitles = ytsubtitles.ytsubtitles:download_subs_arguments'
         ]
     },
     # scripts=['bin/script1', 'bin/script2'],
-    url='https://github.com/gioelecrispo/decoripy.git',
+    url='https://github.com/vvigilante/decoripy.git',
     license='MIT',
     license_file='LICENSE',
     platform='any',
-    description='dlsubs makes you download subs from youtube.',
+    description='ytsubtitles makes you download subs from youtube.',
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',
     install_requires=read_file('requirements.txt').splitlines(),
