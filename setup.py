@@ -30,7 +30,7 @@ setup(
     packages=find_packages('.'),
     entry_points={
         'console_scripts': [
-            'ytsubtitles = ytsubtitles.ytsubtitles:download_subs_arguments'
+            'ytsubtitles = ytsubtitles:download_subs_arguments'
         ]
     },
     # scripts=['bin/script1', 'bin/script2'],
