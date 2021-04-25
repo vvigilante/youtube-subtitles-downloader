@@ -23,7 +23,7 @@ clean_dist()
 
 setup(
     name='ytsubtitles',
-    version="0.1.0",
+    version="0.1.1",
     author='Vincenzo Vigilante, Gioele Crispo',
     author_email='info@vvigilante.com',
     package_dir={'ytsubtitles': 'ytsubtitles'},
@@ -38,7 +38,7 @@ setup(
     license='MIT',
     license_file='LICENSE',
     platform='any',
-    description='ytsubtitles makes you download subs from youtube.',
+    description='Download subtitles / closed captions from youtube, including manually and automatically generated ones.',
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',
     install_requires=read_file('requirements.txt').splitlines(),
