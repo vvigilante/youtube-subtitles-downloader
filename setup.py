@@ -38,7 +38,7 @@ setup(
     license='MIT',
     license_file='LICENSE',
     platform='any',
-    description='ytsubtitles makes you download subs from youtube.',
+    description='Download subtitles / closed captions from youtube, including manually and automatically generated ones.',
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',
     install_requires=read_file('requirements.txt').splitlines(),
