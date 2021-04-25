@@ -1,3 +1,4 @@
+import sys,os
 import urllib.request
 import urllib.parse
 import json
@@ -22,7 +23,14 @@ def download_subs_arguments():
     parser.add_argument('--lang', default='en',
                         help='The subs language')
     args = parser.parse_args()
-    __download_subs__(args.video, args.lang)
+    try:
+        v_id = args.video.split("watch?v=")[1]
+    except IndexError:
+        try:
+            v_id = args.video.split("youtu.be/")[1]
+        except IndexError:
+            v_id = args.video
+    __download_subs__(v_id, args.lang)
 
 
 def __download_subs__(video_identifier, target_language):
@@ -58,7 +66,8 @@ def __get_sub_track_urls__(video_info):
                 'captionTracks']
         return {caption_track["languageCode"]: caption_track["baseUrl"]
                 for caption_track in caption_tracks}
-    except KeyError:
+    except KeyError as e:
+        print(video_info, file=sys.stderr)
         raise VideoParsingException("Error retrieving metadata. "
                         "The video may be non-existing or be licensed.")
 
