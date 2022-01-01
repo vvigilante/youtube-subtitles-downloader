@@ -1,3 +1,8 @@
+```diff
+- NOTICE
+- The library is currently broken due to API change
+```
+
 # Youtube subtitles downloader
 Download closed captions from youtube videos (both manual and automatically generated), and convert them to srt format 
 
